@@ -3,7 +3,7 @@ A beautiful jQuery onscreen keyboard by [Jeremy Blaze](https://jeremyblaze.com)
 
 ***
 
-### Instructions
+## Instructions
 
 **1. Include necessary files**
 
@@ -24,12 +24,13 @@ A beautiful jQuery onscreen keyboard by [Jeremy Blaze](https://jeremyblaze.com)
 
 ```
 <script type="text/javascript">
-$(document).ready(function(){
-    $('.onscreenKeyboard').onscreenKeyboard({
-        type: 'qwerty', // this can be either 'qwerty' or 'numeric'
-        caps: true, // start the keyboard in caps mode
-        allowTypingClass: 'onscreenKeyboardTarget' // add this class to elements which can be typed in    });
-});
+	$(document).ready(function(){
+	    $('.onscreenKeyboard').onscreenKeyboard({
+	        type: 'qwerty', // this can be either 'qwerty' or 'numeric'
+	        caps: true, // start the keyboard in caps mode
+	        allowTypingClass: 'onscreenKeyboardTarget' // add this class to elements which can be typed in    });
+		});
+	});
 </script>
 ```
 
@@ -37,7 +38,7 @@ $(document).ready(function(){
 
 ***
 
-### To do
+## To do
 
 - [x] Basic version
 - [ ] Make size adjust for mobile devices
