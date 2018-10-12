@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Onscreen Keyboard by Jeremy Blaze</title>
+    <style type="text/css">
+    
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: helvetica, arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            text-align: center;
+        }
+        
+        input {
+            margin-top: 100px;
+            padding: 20px;
+            width: 400px;
+            font-size: 30px;
+            text-align: center;
+        }
+    
+    </style>
+    <link rel="stylesheet" type="text/css" href="jquery.onscreenKeyboard.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="jquery.caret.js"></script>
+    <script src="jquery.onscreenKeyboard.js"></script>
+    <script type="text/javascript">
+    
+        $(document).ready(function(){
+            $('.onscreenKeyboard').onscreenKeyboard({
+                caps: false
+            });
+        });
+    
+    </script>
+</head>
+<body>
+    <input type="text" class="onscreenKeyboardTarget" autofocus />
+    <div class="onscreenKeyboard"></div>
+</body>
+</html>
