@@ -61,12 +61,6 @@ $.fn.onscreenKeyboard = function(options){
             var caret = $(input).caret();
             var value = $(input).val();
             
-            if ( char == 'shift' ) {
-                $(target).toggleClass('caps');
-            } else if ( char != 'space' && char != 'delete' ) {
-                $(target).removeClass('caps');
-            }
-            
             var type = null;
             
             if ( char == 'space' ) {
@@ -75,9 +69,18 @@ $.fn.onscreenKeyboard = function(options){
                 var newValue = value.charAt(caret) + value.substr(0, (caret - 1)) + value.substr(caret + 1);
                 $(input).val(newValue);
                 $(input).caret(caret-1);
+            } else if ( char == 'shift' ) {
+                $(target).toggleClass('caps');
             } else {
-                if ( $(target).hasClass('caps') ) { var char = char.toUpperCase(); }
+                
+                if ( $(target).hasClass('caps') ) {
+                    var char = char.toUpperCase();
+                }
+                
                 var type = char;
+                
+                $(target).removeClass('caps');
+                
             }
             
             if ( type != null ) {
